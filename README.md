@@ -22,6 +22,7 @@ The project demonstrates the use of **Splunk Search Processing Language (SPL)** 
 - [Abnormal HTTP Traffic Detection](#abnormal-http-traffic-detection)
 - [IOC Identification](#ioc-identification)
 - [Security Dashboards](#security-dashboards)
+- [Screenshots](#screenshots)
 - [Investigation Workflow](#investigation-workflow)
 - [SOC Analyst Perspective](#soc-analyst-perspective)
 - [Detection Methodology](#detection-methodology)
@@ -94,31 +95,31 @@ The project followed a general SIEM investigation workflow:
                 Security Logs
                      |
                      v
-              Log Ingestion
+                Log Ingestion
                      |
                      v
-                  Splunk
+                   Splunk
                      |
                      v
-                SPL Search
+                 SPL Search
                      |
                      v
-              Log Analysis
+                 Log Analysis
                      |
                      v
-           Suspicious Activity
+              Suspicious Activity
                      |
                      v
-              Evidence Review
+                Evidence Review
                      |
                      v
-              IOC Identification
+                IOC Identification
                      |
                      v
-             Investigation
+                 Investigation
                      |
                      v
-              Documentation
+                 Documentation
 ```
 
 ---
@@ -322,19 +323,19 @@ The investigation workflow was:
 SSH Authentication Logs
           |
           v
-    Failed Logins
+      Failed Logins
           |
           v
      Group by Source
           |
           v
-   Count Attempts
+     Count Attempts
           |
           v
 Identify High-Frequency Sources
           |
           v
-   Investigate Activity
+    Investigate Activity
 ```
 
 The analysis considered:
@@ -497,16 +498,16 @@ The dashboard concept was to provide visibility into:
 Security Logs
      |
      v
-    Splunk
+   Splunk
      |
      v
-   SPL Searches
+  SPL Searches
      |
      v
-   Detection
+  Detection
      |
      v
- Dashboard Panels
+Dashboard Panels
      |
      v
 SOC Monitoring
@@ -517,6 +518,70 @@ Dashboard documentation is maintained under:
 ```text
 dashboards/
 ```
+
+---
+
+# Screenshots
+
+The following screenshots provide visual references for the Splunk SIEM analysis, detection, investigation, and dashboard workflows documented in this project.
+
+> **Note:** These screenshots are illustrative/recreated visuals and are not original historical evidence from the previous lab environment.
+
+## Splunk Search Interface
+
+<img src="./screenshots/splunk-search-interface.png" width="850">
+
+---
+
+## DNS SPL Analysis
+
+<img src="./screenshots/dns-spl-search.png" width="850">
+
+---
+
+## SSH Brute-Force Detection
+
+<img src="./screenshots/ssh-bruteforce-detection.png" width="850">
+
+---
+
+## HTTP Traffic Analysis
+
+<img src="./screenshots/http-analysis.png" width="850">
+
+---
+
+## Suspicious DNS Detection
+
+<img src="./screenshots/suspicious-dns-detection.png" width="850">
+
+---
+
+## Splunk SOC Monitoring Dashboard
+
+<img src="./screenshots/splunk-soc-dashboard.png" width="850">
+
+---
+
+## SSH Investigation
+
+<img src="./screenshots/ssh-investigation.png" width="850">
+
+---
+
+## IOC Investigation
+
+<img src="./screenshots/ioc-investigation.png" width="850">
+
+---
+
+## HTTP Error Analysis
+
+<img src="./screenshots/http-error-analysis.png" width="850">
+
+---
+
+For additional information about the screenshot references, see the [Screenshots Documentation](./screenshots/README.md).
 
 ---
 
@@ -531,25 +596,25 @@ Alert / Suspicious Activity
         Initial Triage
             |
             v
-       Search Relevant Logs
+      Search Relevant Logs
             |
             v
-       Analyze Activity
+        Analyze Activity
             |
             v
-       Correlate Evidence
+        Correlate Evidence
             |
             v
-       Identify IOCs
+        Identify IOCs
             |
             v
-       Scope Activity
+        Scope Activity
             |
             v
-      Determine Findings
+       Determine Findings
             |
             v
-        Documentation
+         Documentation
 ```
 
 ---
@@ -764,7 +829,16 @@ splunk-siem-security-log-analysis/
 │   └── README.md
 │
 ├── screenshots/
-│   └── README.md
+│   ├── README.md
+│   ├── splunk-search-interface.png
+│   ├── dns-spl-search.png
+│   ├── ssh-bruteforce-detection.png
+│   ├── http-analysis.png
+│   ├── suspicious-dns-detection.png
+│   ├── splunk-soc-dashboard.png
+│   ├── ssh-investigation.png
+│   ├── ioc-investigation.png
+│   └── http-error-analysis.png
 │
 └── docs/
     └── lessons-learned.md
@@ -790,35 +864,35 @@ The project demonstrates how Splunk can be used to transform security logs into 
                  Security Logs
                        |
                        v
-                    Splunk
+                     Splunk
                        |
                        v
-                   SPL Search
+                    SPL Search
                        |
                        v
-                 Log Analysis
+                   Log Analysis
                        |
-             +---------+---------+
-             |         |         |
-             v         v         v
-            DNS       SSH       HTTP
-             |         |         |
-             +---------+---------+
-                       |
-                       v
-                Threat Detection
+              +--------+--------+
+              |        |        |
+              v        v        v
+             DNS      SSH      HTTP
+              |        |        |
+              +--------+--------+
                        |
                        v
-                 IOC Analysis
+                 Threat Detection
                        |
                        v
-               Investigation
+                   IOC Analysis
                        |
                        v
-                 Dashboards
+                  Investigation
                        |
                        v
-                SOC Monitoring
+                   Dashboards
+                       |
+                       v
+                  SOC Monitoring
 ```
 
 The project demonstrates the complete SIEM workflow:
@@ -829,7 +903,7 @@ The project demonstrates the complete SIEM workflow:
 
 ## Detailed Documentation
 
-Additional documentation will be available throughout the repository:
+Additional documentation is available throughout the repository:
 
 - [SPL Queries](./spl/)
 - [Detection Use Cases](./detections/)
