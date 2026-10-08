@@ -1,0 +1,39 @@
+# Splunk
+*.splunk
+*.spl
+splunk/
+var/
+etc/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editors / IDEs
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+
+# Sensitive files
+.env
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Local datasets
+*.csv
+*.json
+*.pcap
